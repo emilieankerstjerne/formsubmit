@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Handlee", cursive;
+  background-image: url(img/pattern/flowerpattern-fade-3.jpg);
+  background-position: center bottom;
+  background-attachment: fixed;
+  width: 100%;
+  /* siden bliver mindt så høj som skærmens højde */
+  min-height:100vh;
+  /* så footer bliver i bunden */
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+}
+/* giver en blød overgang, når man skal til en sektion længere nede på siden (kontakt og læs mere (showcase) */
+html {
+  scroll-behavior: smooth;
+}
+/* .content{
+  margin-left: 10px;
+  margin-right: 10px;
+} */
+
+/* header */
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  margin-top: 0;
+  background-color: #561c32;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.logo img {
+  height: 100%;
+  width: 50px;
+}
+.logo {
+  display: flex;
+  padding: 16px;
+  margin-left: 20px;
+}
+/* navbar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+nav a {
+  text-decoration: none;
+  color: #F2D2BD;
+  padding: 16px;
+}
+nav a:hover {
+  background-color: #6e3048;
+}
+
+/* dropdown menu */
+/* knappen */
+.dropbtn,
+nav {
+  color: bisque;
+  background-color: #561c32;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+}
+/* bruges til at positioere 'content' korrekt */
+.dropdown {
+  /* position: relative; */
+  display: inline-block;
+}
+/* content i dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #6e3048;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* placerer den foran andre elementer */
+  z-index: 5;
+}
+/* links indeni i dropdown menu */
+.dropdown-content a {
+  text-decoration: none;
+  color: bisque;
+  padding: 12px 16px;
+  display: block;
+}
+/* viser dropdown indhold ved hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* links skifter farve ved hover */
+.dropdown-content a:hover {
+  background-color: #7c445a;
+}
+/* dropdown knap skifter farve når menu er åben */
+.dropdown:hover .dropbtn {
+  background-color: #6e3048;
+}
+
+/* intro */
+/* videosekvens */
+.intro {
+  position: relative;
+  padding: 120px 0 80px 0;
+}
+iframe {
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 190px;
+  z-index: 2;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+/* tekst */
+.velkommen {
+  background-color: #608258d0;
+  width: 645px;
+  height: 430px;
+  z-index: 1;
+  margin-left: 500px;
+}
+.velkommen-tekst {
+  margin-left: 280px;
+  padding-top: 75px;
+}
+.velkommen p {
+  margin-right: 100px;
+  font-family: "Catamaran", sans-serif;
+}
+
+/* menu */
+.menu {
+  background-color: #561c32e3;
+  width: 100%;
+  height: 430px;
+  padding-top: 40px;
+}
+.imgs {
+  position: relative;
+}
+.laes,
+.studie,
+.showcase {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* tekst på billede */
+  text-align: center;
+  color: white;
+  /* billeder på række */
+  float: left;
+  left: 80px;
+  margin: 30px;
+  /* animation */
+  transition: transform 0.3s ease;
+}
+/* kvadratiske billeder */
+.laes img,
+.studie img,
+.showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.laes-tekst,
+.studie-tekst,
+.showcase-tekst {
+  background-color: rgba(159, 159, 159, 0.37);
+  width: 100%;
+  padding: 10px;
+  /* tekst i centeret af billede */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* zoom på hover */
+.laes:hover,
+.studie:hover,
+.showcase:hover {
+  transform: scale(1.1);
+}
+
+/* kontakt */
+#kontakt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+.kontakt-boks{
+  height: 500px;
+  width: 900px;
+  background-color: #608258ae;
+}
+.kontakt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kontakt-tekst{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.textbox, .sendbtn {
+  display: flex;
+  flex-direction: column;
+}
+.textbox input{
+  height: 40px;
+}
+.textbox textarea, input{
+  margin: 0 0 10px;
+}
+.sendbtn input{
+  height: 30px;
+  margin-bottom: 0;
+}
+.textbox ::placeholder{
+  padding-left: 5px;
+}
+.kontakt img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  padding-right: 20px;
+}
+
+/* om mig */
+.om {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+}
+.hvem,
+.komp,
+.bg {
+  width: 28%;
+  float: left;
+  margin: 4% 0 4% 4%;
+  padding: 20px;
+  background-color: #608258d0;
+}
+.hvem h2,
+.komp h2,
+.bg h2 {
+  padding-bottom: 10px;
+}
+.hvem p,
+.komp p, ul,
+.bg h4, ul {
+  font-family: "Catamaran", sans-serif;
+}
+/* fjerne bullet-points */
+.bg li{
+  list-style: none;
+}
+.komp ul{
+  margin-left: 30px;
+}
+
+/* 1. semester underside */
+.indledning {
+  padding: 120px 30px 0px;
+  width: 800px;
+  text-shadow: 1px 1px #00000038;
+}
+.indledning p, .flows p, h4, h5, ul, li{
+  font-family: "Catamaran", sans-serif;
+}
+/* accordion */
+details {
+  background-color: #608258;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  margin: 5px 0;
+  width: 100%;
+  text-align: left;
+}
+details:hover {
+  background-color: #89BD7E;
+}
+summary {
+  padding: 0 18px;
+}
+/* flows indhold */
+.flow5 {
+  margin-top: 25px;
+  width: 100%;
+}
+.flows h4,
+h5 {
+  padding: 10px 33px 0 33px;
+}
+.flows p {
+  padding-left: 33px;
+  width: 800px;
+}
+.flows ul {
+  padding: 0px 50px;
+}
+.flows p,
+h5 {
+  font-size: 14px;
+}
+.flows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* billeder */
+img {
+  max-width: 100%;
+}
+.img {
+  display: flex;
+  justify-content: right;
+  /* float: right; */
+  width: 400px;
+  padding: 16px;
+}
+
+/* 2.-4. semester undersider */
+.kommer {
+  display: flex;
+  justify-content: center;
+  padding: 130px;
+}
+
+/* showcase underside */
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  10% {
+    left: 0%;
+  }
+  20% {
+    left: -100%;
+  }
+  30% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  50% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  70% {
+    left: -300%;
+  }
+  80% {
+    left: -400%;
+  }
+}
+figure {
+  margin: 0;
+  font-weight: 100;
+}
+div#captioned-gallery {
+  width: 50%;
+  overflow: hidden;
+  /* placeres i midten */
+  margin: auto;
+  padding: 115px 0 0 0;
+}
+figure.slider {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  white-space: nowrap;
+  font-size: 0;
+  animation: 10s slidy infinite;
+}
+figure.slider figure {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  position: inherit;
+  vertical-align: top;
+}
+figure.slider img {
+  /* 100% af de 50% caption */
+  width: 100%;
+  height: auto;
+}
+figure.slider figure figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.37);
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem;
+}
+/* knap */
+.button {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  text-decoration: none;
+  margin: 6px;
+  padding: 3px 5px;
+  font-family: "Handlee", cursive;
+  background-color: #608258;
+  border: 1px solid black;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #89BD7E;
+}
+/* tekst */
+.galleri {
+  width: 100%;
+  background-color: #89bd7e7e;
+}
+.galleri p, h4, h5{
+  font-family: "Catamaran", sans-serif;
+}
+.kunst, .dans {
+  margin-top: 5px;
+  padding: 30px;
+}
+.kunst p, .dans p {
+  width: 600px;
+}
+.kunst img, .dans img {
+  display: inline;
+  width: 500px;
+  padding: 20px 20px 0 0;
+}
+
+/* footer */
+footer i {
+  color: #608258;
+  padding: 25px 5px;
+}
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: #561c32;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 0 70px;
+  margin-top: auto;
+}
+footer i:hover {
+  color: #89BD7E;
+}
