@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolie</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran&family=Handlee&family=Neucha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <!-- logo -->
+      <div class="logo">
+        <a href="index.html"
+          ><img src="logo/logo final white.png" alt="emilie ankerstjerne"
+        /></a>
+      </div>
+      <!-- navbar -->
+      <nav>
+        <a href="om.html">Om mig</a>
+        <div class="dropdown">
+          <div class="dropbtn">Studie</div>
+          <div class="dropdown-content">
+            <a href="1sem.html">1. semester</a>
+            <a href="2sem.html">2. semester</a>
+            <a href="3sem.html">3. semester</a>
+            <a href="4sem.html">4. semester</a>
+          </div>
+        </div>
+        <a href="showcase.html">Showcase</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+    <!-- intro (video + velkommen) -->
+    <div class="intro">
+      <!-- videosekvens fra YouTube -->
+      <div class="video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/TPxx4XUd-5E"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <!-- velkommen -->
+      <div class="velkommen">
+        <div class="velkommen-tekst">
+          <h1>Emilie Ankerstjerne</h1>
+          <h3>Multimediedesigner</h3>
+          <br />
+          <p>
+            Velkommen til min portfolie, en side hvor du kan lære mere om hvem jeg er og hvad jeg kan, som en førsteårs-studerende på CphBusiness. Her står alt om hvad jeg hidtil har arbejdet med på mit studie, samt de projekter jeg har lavet. Derudover kan du se hvad jeg har af færdigheder udenfor skolen.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- menu -->
+    <div class="menu">
+      <div class="imgs">
+        <div class="laes">
+          <div class="laes-tekst">Læs mere om mig</div>
+          <a href="om.html"><img src="img/menu/code9.jpg" /></a>
+        </div>
+        <div class="studie">
+          <div class="studie-tekst">Mit studie</div>
+          <a href="1sem.html"><img src="img/menu/pc.jpg" /></a>
+        </div>
+        <div class="showcase">
+          <div class="showcase-tekst">Showcase</div>
+          <a href="showcase.html"><img src="img/menu/screen.jpg" /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- kontakt -->
+    <!-- får et ID, så knappe "kontakt" linker ned til bunden af siden -->
+    <div class="kontakt-boks">
+    <div class="kontakt-tekst"><h1>Kontakt mig</h1></div>
+    <div id="kontakt"> 
+        <div class="kontakt">         
+          <div class="portraet">
+            <img src="img/van gogh.jpg" alt="Emilie-Ankerstjerne" />
+          </div>
+          <div class="textbox">
+            <form action="https://formsubmit.co/mulle.as@hotmail.com" method="POST">
+            <input type="text" id="navn" placeholder="Navn">
+            <input type="text" id="mail" placeholder="E-mail">
+            <input type="text" id="emne" placeholder="Emne">
+            <textarea name="besked" id="besked" cols="37" rows="10" placeholder="Besked"></textarea>
+            <div class="sendbtn"><input type="submit" value="Send"></div>
+          </form>
+          </div>
+        </div>
+    </div>
+  </div>
+    <!-- footer -->
+    <footer>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="logo/logo final white.png" alt="emilie ankerstjerne"
+        /></a>
+      </div>
+      <div class="some">
+        <a
+          href="https://m.facebook.com/people/Emilie-Ankerstjerne/100009318772542"
+          target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/emilie.anker/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="http://mulle.as@hotmail.com" target="_blank"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- <div class="content"></div> -->
+  </body>
+</html>
